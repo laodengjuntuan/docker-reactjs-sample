@@ -57,7 +57,7 @@ jobs:
             --workdir /app \
             --entrypoint "" \
             ${{ steps.meta.outputs.REPO_NAME }}-dev:latest \
-            sh -c "npm audix fix && npm ci && npx vitest run -reporter=verbose"
+            sh -c "npm audit fix && npm ci && npx vitest run -reporter=verbose"
         env:
           CI: true
           NODE_ENV: test
